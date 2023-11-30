@@ -1,0 +1,139 @@
+body {
+    font-family: 'Arial', sans-serif;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+
+.container {
+    margin-top: -100px; /* Adjust the top margin of the container */
+}
+
+.container h1 span.logo-container {
+    margin-left: -50px; /* Adjust the left margin as needed */
+}
+
+
+.container h1 img {
+    vertical-align: middle;
+    horizontal-align: middle;
+    margin-right: -5px; /* Adjust the negative margin as needed */
+    height: 150px;
+    width: auto;
+}
+
+.container h1 {
+    margin-bottom: 75px; /* Adjust the bottom margin as needed */
+    font-size: 100px; /* Adjust the font size as needed */
+}
+
+button {
+    margin-top: -200px; /* Adjust the top margin as needed */
+    font-size: 50px; /* Adjust the font size as needed */
+}
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+.scrollable-container {
+    display: flex;
+    width: 40%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    overflow-y: auto;
+    max-height: 600px;
+}
+
+.scrollable-text {
+    color: #333;
+}
+
+.container {
+    text-align: center;
+}
+
+.file-upload-container {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.container.file-upload h1 {
+    /* Styles for the header title on the file upload page */
+    font-size: 100px; /* Adjust the font size as needed */
+    margin-bottom: 50px;
+}
+
+
+
+.container.file-upload button {
+    /* Styles for the "Generate" button on the file upload page */
+    font-size: 35px; /* Adjust the font size as needed */
+    margin-top: 10px; /* Adjust the top margin as needed */
+    margin-right:-26px;
+    color: #555555;
+}
+
+
+
+.container.file-upload label {
+    /* Styles for the labels on the file upload page */
+    font-size: 38px;
+    margin-left: 225px;
+    margin-bottom: 500px;
+}
+
+.container.file-upload input[type="file"] {
+    /* Styles for the file input elements on the file upload page */
+    font-size: 35px;
+    //margin-left: 50px;
+    color: #9CB5CD;
+    
+}
+
+
+
+
+.container.generated-notes h1 {
+    font-size: 60px; /* Adjust the font size as needed */
+}
+
+.container.generated-notes .scrollable-container {
+    display: flex;
+    width: 40%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+.container.generated-notes .scrollable-text {
+    color: #FFFFFF; /* Set your desired text color for the scrollable container */
+}
+
+.container.generated-notes button {
+    font-size: 30px; /* Adjust the font size as needed */
+    margin-top: 35px; /* Adjust the top margin as needed */
+    color: #555555; /* Set your desired text color for the button */
+}
+
+.container.generated-notes .button-container button:first-child {
+    font-size: 30px;
+    margin-top: 20px;
+    color: #43609C; /* Set your desired text color for the "Download" button */
+}
+

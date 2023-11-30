@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script>
+        // Pass the logo URL to the script as a variable
+        const logoUrl = "{{ url_for('static', filename='images/logo.png') }}";
+    </script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+    <title>Gen AI Notes</title>
+    <style>
+        
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #FFFFFF; /* White background */
+            color: #004080; /* Dark Blue text */
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .file-upload-container {
+            max-width: 300px;
+            margin: 0 auto;
+            background-color: #CCCCCC; /* Light Grey container background */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .scrollable-container {
+            display: flex;
+            width: 60%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #43609C; /* Dark Blue scrollable container background */
+            border: 1px solid #CCCCCC; /* Add a border for better separation */
+            border-radius: 10px;
+            overflow-y: auto;
+            max-height: 600px;
+        }
+        
+        .scrollable-text {
+            color: #FFFFFF; /* Set your desired text color for the scrollable container */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Your existing container content remains unchanged -->
+    </div>
+
+    <!-- Updated .scrollable-container to include the generated response -->
+    <div class="scrollable-container">
+        <p class="scrollable-text">{{ contents|safe }} {{ contents2|safe }} {{ contents3|safe }}</p>
+    </div>
+
+    <!-- Add the new section for displaying the generated response -->
+    <div class="generated-response">
+        {% if printing %}
+            {{ printing|safe }}
+        {% else %}
+            <!-- You can add a message for when there is no printing -->
+            No response generated.
+        {% endif %}
+    </div>
+
+    <script src="{{ url_for('static', filename='scripts/script.js') }}"></script>
+</body>
+</html>
